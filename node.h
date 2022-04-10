@@ -8,15 +8,15 @@ struct Node {
     Node<T>* prev;
 
     Node(){ 
-        // TODO
+        data = 0;
     }
 
     Node(T value){
-        // TODO
+        data = value;
     }
 
     void killSelf(){
-        // TODO      
+        delete this;
     }    
 };
 

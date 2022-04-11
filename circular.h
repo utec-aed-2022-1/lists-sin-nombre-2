@@ -192,23 +192,16 @@ public:
             return;
         }
         else{
-            // Get first node
             Node<T>* front = head->next;
             Node<T>* back = nullptr;
             while (front != head){
-                // Get next node
                 back = front->next;
-                // Update node value when consecutive nodes are not sort
                 while (back != head && back->prev != head && back->data < back->prev->data){
-                    // Modified node data
-                    //this->swapData(back, back->prev);
                     T value = back->data;
                     back->data = back->prev->data;
                     back->prev->data = value;
-                    // Visit to previous node
                     back = back->prev;
                 }
-                // Visit to next node
                 front = front->next;
             }
         }

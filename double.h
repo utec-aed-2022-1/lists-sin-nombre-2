@@ -24,6 +24,16 @@ public:
         delete tail;
     }
 
+    typedef ListIterator<T> Iterator;
+
+    Iterator begin(){
+        return Iterator(this, this->head);
+    }
+
+    Iterator end(){
+        return Iterator(this, nullptr);
+    }
+
     T front(){
         return head->data;
         //throw ("sin definir");

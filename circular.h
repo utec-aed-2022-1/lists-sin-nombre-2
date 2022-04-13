@@ -22,6 +22,16 @@ public:
         delete head;
     }
 
+    typedef ListIterator<T> Iterator;
+
+    Iterator begin(){
+        return Iterator(this, this->head->next);
+    }
+
+    Iterator end(){
+        return Iterator(this, head);
+    }
+
     T front(){
         return head->next->data;
         //throw ("sin definir");

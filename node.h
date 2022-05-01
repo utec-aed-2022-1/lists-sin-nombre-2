@@ -1,6 +1,6 @@
 #ifndef NODE_H
 #define NODE_H
-
+#include <iostream>
 template <typename T>
 struct Node {
     T data;
@@ -8,15 +8,19 @@ struct Node {
     Node<T>* prev;
 
     Node(){ 
-        // TODO
+        data = 0;
+        next = nullptr;
+        prev = nullptr;
     }
 
     Node(T value){
-        // TODO
+        data = value;
+        next = nullptr;
+        prev = nullptr;
     }
 
     void killSelf(){
-        // TODO      
+        delete this;
     }    
 };
 

@@ -9,7 +9,7 @@ using namespace std;
 void test(List<int>* list){   
     cout<<"*** Testing "<<list->name()<<"  *******"<<endl; 
     ASSERT(list->is_empty() == true, "The function is_empty is not working");
-    ASSERT(list->size() == 0, "The function size is not working");    
+    ASSERT(list->size() == 0, "The function size is not working");
     list->push_front(5);
     list->push_front(10);
     ASSERT(list->pop_front() == 10, "The function push_front/pop_front is not working");
